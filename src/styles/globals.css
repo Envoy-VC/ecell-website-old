@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Adieu-Regular';
+	src: url('../../public/fonts/Adieu-Regular.otf');
+}
+
+html,
+body,
+main {
+	overscroll-behavior: none;
+}
