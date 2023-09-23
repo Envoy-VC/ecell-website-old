@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
 @font-face {
 	font-family: 'Adieu-Regular';
 	src: url('../../public/fonts/Adieu-Regular.otf');
@@ -26,4 +28,24 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background: #3a7a92;
 	border-radius: 12px;
+}
+
+/*   Text Styles   */
+
+.mask-text {
+	mask-image: linear-gradient(
+		60deg,
+		black 25%,
+		rgba(0, 0, 0, 0.2) 50%,
+		black 75%
+	);
+	mask-size: 400%;
+	mask-position: 0%;
+}
+
+.mask-text:hover {
+	mask-position: 100%;
+	transition:
+		mask-position 1.25s ease,
+		-webkit-mask-position 1.25s ease;
 }

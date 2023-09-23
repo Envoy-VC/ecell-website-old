@@ -2,9 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+// Variants
+import { textVariants } from '~/utils/framer';
+
 import Typewriter from 'typewriter-effect';
 
 export default function MultiLayerParallax() {
+	const typewriterRef = React.useRef<HTMLElement>(null);
 	const ref = React.useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
@@ -22,8 +26,17 @@ export default function MultiLayerParallax() {
 				style={{ y: textY }}
 				className={`relative z-10 mt-[16rem] px-4`}
 			>
-				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider text-[#252930]'>
-					<div className='text-[1rem] sm:text-lg'>
+				<div className='text-textPrimary flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider'>
+					<motion.div
+						className='text-[1rem] sm:text-lg'
+						initial='hidden'
+						animate='visible'
+						variants={textVariants({
+							y: 100,
+
+							delay: 0.25,
+						})}
+					>
 						<Typewriter
 							options={{
 								autoStart: true,
@@ -40,13 +53,23 @@ export default function MultiLayerParallax() {
 									.start();
 							}}
 						/>
-					</div>
-					<div className='text-[2.15rem] sm:text-5xl lg:text-6xl xl:text-8xl'>
-						Entrepreneurship Cell
-					</div>
-					<div className='text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl'>
-						NIT Agartala
-					</div>
+					</motion.div>
+					<motion.div
+						className='flex flex-col gap-2'
+						initial='hidden'
+						animate='visible'
+						variants={textVariants({
+							y: 200,
+							delay: 0.6,
+						})}
+					>
+						<div className='text-[2.15rem] sm:text-5xl lg:text-6xl xl:text-8xl'>
+							Entrepreneurship Cell
+						</div>
+						<div className='text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl'>
+							NIT Agartala
+						</div>
+					</motion.div>
 				</div>
 			</motion.div>
 

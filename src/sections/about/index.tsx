@@ -1,18 +1,18 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
 
 const About = () => {
 	return (
 		<section className='mx-auto my-24 h-full w-full max-w-7xl px-8 py-12'>
-			<div className='mb-24 text-center font-adieuRegular text-4xl font-bold'>
+			<div className='text-textPrimary mask-text mb-24 text-center font-adieuRegular text-6xl font-bold'>
 				About Us
 			</div>
 			<div className='flex flex-col gap-8 md:flex-row'>
 				<div>
-					<h3 className='text-4xl font-semibold md:text-5xl'>
+					<h3 className='font-raleway text-4xl font-semibold md:text-5xl'>
 						Who are we?
 					</h3>
-					<p className='my-4 max-w-3xl text-base text-slate-700 md:my-6 md:text-lg'>
+					<p className='font-raleway my-4 max-w-3xl text-base text-slate-700 md:my-6 md:text-lg'>
 						The Entrepreneurship Cell is a non-profit organization
 						run by the students of National Institute of Technology
 						Agartala that aims at manifesting the latent
@@ -79,10 +79,10 @@ const generateSquares = () => {
 };
 
 const ShuffleGrid = () => {
-	const timeoutRef = useRef<any>(null);
-	const [squares, setSquares] = useState(generateSquares());
+	const timeoutRef = React.useRef<any>(null);
+	const [squares, setSquares] = React.useState(generateSquares());
 
-	useEffect(() => {
+	React.useEffect(() => {
 		shuffleSquares();
 
 		return () => clearTimeout(timeoutRef.current);

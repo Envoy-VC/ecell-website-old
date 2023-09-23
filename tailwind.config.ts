@@ -6,6 +6,10 @@ export default {
 		extend: {
 			fontFamily: {
 				adieuRegular: ['Adieu-Regular', 'sans-serif'],
+				raleway: ['Raleway', 'sans-serif'],
+			},
+			colors: {
+				textPrimary: '#252930',
 			},
 		},
 	},
