@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 const About = () => {
 	return (
 		<section className='mx-auto my-24 h-full w-full max-w-7xl px-8 py-12'>
-			<div className='text-textPrimary mask-text mb-24 text-center font-adieuRegular text-6xl font-bold'>
+			<div className='text-textPrimary animateUnderline mx-auto mb-24 flex w-fit justify-center font-adieuRegular text-6xl font-bold'>
 				About Us
 			</div>
+
 			<div className='flex flex-col gap-8 md:flex-row'>
 				<div>
 					<h3 className='font-raleway text-4xl font-semibold md:text-5xl'>

@@ -9,6 +9,7 @@ export default {
 				raleway: ['Raleway', 'sans-serif'],
 			},
 			colors: {
+				primary: '#73B3DD',
 				textPrimary: '#252930',
 			},
 		},
