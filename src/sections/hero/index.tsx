@@ -11,7 +11,7 @@ export default function MultiLayerParallax() {
 		offset: ['start start', 'end start'],
 	});
 	const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-	const textY = useTransform(scrollYProgress, [0, 1], ['0%', '90%']);
+	const textY = useTransform(scrollYProgress, [0, 1], ['0%', '80%']);
 
 	return (
 		<div
@@ -22,7 +22,7 @@ export default function MultiLayerParallax() {
 				style={{ y: textY }}
 				className={`relative z-10 mt-[16rem] px-4`}
 			>
-				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black text-[#353944]'>
+				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider text-[#252930]'>
 					<div className='text-[1rem] sm:text-lg'>
 						<Typewriter
 							options={{
@@ -36,14 +36,15 @@ export default function MultiLayerParallax() {
 									.typeString('INNOVATE. ')
 									.pauseFor(500)
 									.typeString('INCUBATE. ')
+									.pauseFor(1000)
 									.start();
 							}}
 						/>
 					</div>
-					<div className='text-[1.75rem] sm:text-5xl lg:text-6xl xl:text-8xl'>
+					<div className='text-[2.15rem] sm:text-5xl lg:text-6xl xl:text-8xl'>
 						Entrepreneurship Cell
 					</div>
-					<div className='text-[1.75rem] sm:text-5xl lg:text-6xl xl:text-7xl'>
+					<div className='text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl'>
 						NIT Agartala
 					</div>
 				</div>
