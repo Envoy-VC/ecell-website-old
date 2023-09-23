@@ -12,3 +12,18 @@ body,
 main {
 	overscroll-behavior: none;
 }
+
+/* Custom Scrollbar */
+
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #b6d6ee;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #3a7a92;
+	border-radius: 12px;
+}
