@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+import Typewriter from 'typewriter-effect';
+
 export default function MultiLayerParallax() {
 	const ref = React.useRef(null);
 	const { scrollYProgress } = useScroll({
@@ -20,9 +22,23 @@ export default function MultiLayerParallax() {
 				style={{ y: textY }}
 				className={`relative z-10 mt-[16rem] px-4`}
 			>
-				<div className='font-adieuRegular flex flex-col items-center gap-4 text-center font-black text-[#404655]'>
+				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black text-[#353944]'>
 					<div className='text-[1rem] sm:text-lg'>
-						IDEATE. INNOVATE. INCUBATE.
+						<Typewriter
+							options={{
+								autoStart: true,
+								loop: true,
+							}}
+							onInit={(typewriter) => {
+								typewriter
+									.typeString('IDEATE. ')
+									.pauseFor(500)
+									.typeString('INNOVATE. ')
+									.pauseFor(500)
+									.typeString('INCUBATE. ')
+									.start();
+							}}
+						/>
 					</div>
 					<div className='text-[1.75rem] sm:text-5xl lg:text-6xl xl:text-8xl'>
 						Entrepreneurship Cell
