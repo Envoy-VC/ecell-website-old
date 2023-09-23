@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 const About = () => {
 	return (
 		<section className='mx-auto my-24 h-full w-full max-w-7xl px-8 py-12'>
-			<div className='text-textPrimary animateUnderline mx-auto mb-24 flex w-fit justify-center font-adieuRegular text-6xl font-bold'>
-				About Us
+			<div className='mb-24 flex sm:justify-center'>
+				<div className='text-textPrimary animateUnderline w-fit font-adieuRegular text-5xl font-bold sm:text-6xl'>
+					About Us
+				</div>
 			</div>
 
 			<div className='flex flex-col gap-8 md:flex-row'>
@@ -96,7 +98,7 @@ const ShuffleGrid = () => {
 	};
 
 	return (
-		<div className='grid h-[450px] w-full max-w-lg grid-cols-4 grid-rows-4 gap-1'>
+		<div className='grid h-[450px] w-full max-w-lg grid-cols-3 grid-rows-4 gap-1 sm:grid-cols-4 sm:grid-rows-4'>
 			{squares.map((sq) => sq)}
 		</div>
 	);

@@ -1,17 +1,24 @@
 import React from 'react';
+import { create } from 'zustand';
+
+import { Navbar, FloatingMenu } from '~/components';
 import { Hero, About } from '~/sections';
 
-import { Noto_Sans } from 'next/font/google';
+interface MenuState {
+	open: boolean;
+	setOpen: (open: boolean) => void;
+}
 
-const notoSans = Noto_Sans({
-	subsets: ['latin'],
-	display: 'swap',
-	weight: '500',
-});
+export const useMenuStore = create<MenuState>((set) => ({
+	open: false,
+	setOpen: (open: boolean) => set({ open }),
+}));
 
 const Home = () => {
 	return (
 		<main>
+			<Navbar />
+			<FloatingMenu />
 			<Hero />
 			<About />
 		</main>
