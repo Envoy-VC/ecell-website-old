@@ -26,14 +26,14 @@ export default function MultiLayerParallax() {
 				style={{ y: textY }}
 				className={`relative z-10 mt-[16rem] px-4`}
 			>
-				<div className='text-textPrimary flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider'>
+				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider text-textPrimary'>
 					<motion.div
 						className='text-[1rem] sm:text-lg'
 						initial='hidden'
 						animate='visible'
 						variants={textVariants({
-							y: 100,
-
+							direction: 'y',
+							from: 200,
 							delay: 0.25,
 						})}
 					>
@@ -59,7 +59,8 @@ export default function MultiLayerParallax() {
 						initial='hidden'
 						animate='visible'
 						variants={textVariants({
-							y: 200,
+							direction: 'y',
+							from: 200,
 							delay: 0.6,
 						})}
 					>

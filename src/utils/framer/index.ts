@@ -1,28 +1,33 @@
 import type { Variants } from 'framer-motion';
 
 interface TextVariantProps {
-	y: number;
+	direction: 'x' | 'y';
+	from?: number;
+	to?: number;
 	delay?: number;
 	duration?: number;
 }
 
 export const textVariants = ({
-	y,
-	delay,
-	duration,
+	direction,
+	from = 200,
+	to = 0,
+	delay = 0,
+	duration = 0.4,
 }: TextVariantProps): Variants => {
+	const animateDirection = direction;
 	return {
 		hidden: {
 			opacity: 0,
-			y: y || 200,
+			[animateDirection]: from,
 		},
 		visible: {
 			opacity: 1,
-			y: 0,
+			[animateDirection]: to,
 			transition: {
 				type: 'tween',
-				duration: duration || 0.4,
-				delay: delay || 0,
+				duration: duration,
+				delay: delay,
 			},
 		},
 	};
