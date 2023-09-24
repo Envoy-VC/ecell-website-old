@@ -1,13 +1,41 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { motion, Variants } from 'framer-motion';
 import { useMenuStore } from '~/pages';
 
 import { sidebarVariants } from '~/utils/framer';
 
-const links = ['About Us', 'Initiatives', 'Our Team', 'Reach out'];
+interface LinkProps {
+	label: React.ReactNode;
+	href: string;
+}
+
+const links: LinkProps[] = [
+	{
+		label: 'Home',
+		href: '/',
+	},
+	{
+		label: 'About Us',
+		href: '#about',
+	},
+	{
+		label: 'Initiatives',
+		href: '#initiatives',
+	},
+	{
+		label: 'Our Team',
+		href: '#team',
+	},
+	{
+		label: 'Reach out',
+		href: '#reach-out',
+	},
+];
 
 const FloatingMenu = () => {
-	const { open } = useMenuStore();
+	const router = useRouter();
+	const { open, setOpen } = useMenuStore();
 
 	const MenuItemVariants = (index: number): Variants => {
 		return {
@@ -21,11 +49,19 @@ const FloatingMenu = () => {
 				transition: {
 					type: 'tween',
 					duration: 0.25,
-					delay: 0.4 + 0.05 * index,
+					delay: 0.15 + 0.05 * index,
 				},
 			},
 		};
 	};
+
+	const handleLinkClick = (href: string) => {
+		setOpen(false);
+		setTimeout(() => {
+			router.push(href);
+		}, 1000);
+	};
+
 	return (
 		<motion.div
 			className='fixed z-[1000] h-screen w-full bg-white'
@@ -38,13 +74,14 @@ const FloatingMenu = () => {
 				<div className='flex flex-col gap-12'>
 					{links.map((link, index) => (
 						<motion.div
+							onClick={() => handleLinkClick(link.href)}
 							key={index}
-							className='animateUnderline hover:text-primary w-fit cursor-pointer font-adieuRegular text-4xl font-semibold transition-all duration-300 ease-in-out hover:text-5xl sm:text-8xl sm:hover:text-9xl'
+							className='animateUnderline w-fit cursor-pointer font-adieuRegular text-4xl font-semibold transition-all duration-300 ease-in-out hover:text-5xl hover:text-primary sm:text-8xl sm:hover:text-9xl'
 							variants={MenuItemVariants(index)}
 							initial={false}
 							animate={open ? 'visible' : 'hidden'}
 						>
-							{link}
+							{link.label}
 						</motion.div>
 					))}
 				</div>

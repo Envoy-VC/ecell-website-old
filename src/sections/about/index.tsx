@@ -3,9 +3,12 @@ import { motion } from 'framer-motion';
 
 const About = () => {
 	return (
-		<section className='mx-auto my-24 h-full w-full max-w-7xl px-8 py-12'>
+		<section
+			className='mx-auto my-24 h-full w-full max-w-7xl px-8 py-12'
+			id='about'
+		>
 			<div className='mb-24 flex sm:justify-center'>
-				<div className='text-textPrimary animateUnderline w-fit font-adieuRegular text-5xl font-bold sm:text-6xl'>
+				<div className='animateUnderline w-fit font-adieuRegular text-5xl font-bold text-textPrimary sm:text-6xl'>
 					About Us
 				</div>
 			</div>
@@ -15,7 +18,7 @@ const About = () => {
 					<h3 className='font-raleway text-4xl font-semibold md:text-5xl'>
 						Who are we?
 					</h3>
-					<p className='font-raleway my-4 max-w-3xl text-base text-slate-700 md:my-6 md:text-lg'>
+					<p className='my-4 max-w-3xl font-raleway text-base text-slate-700 md:my-6 md:text-lg'>
 						The Entrepreneurship Cell is a non-profit organization
 						run by the students of National Institute of Technology
 						Agartala that aims at manifesting the latent
