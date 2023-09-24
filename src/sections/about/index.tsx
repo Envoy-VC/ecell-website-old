@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SectionHeading } from '~/components';
 
 const About = () => {
 	return (
@@ -8,9 +9,7 @@ const About = () => {
 			id='about'
 		>
 			<div className='mb-24 flex sm:justify-center'>
-				<div className='animateUnderline w-fit font-adieuRegular text-5xl font-bold text-textPrimary sm:text-6xl'>
-					About Us
-				</div>
+				<SectionHeading title='About Us' />
 			</div>
 
 			<div className='flex flex-col gap-8 md:flex-row'>
