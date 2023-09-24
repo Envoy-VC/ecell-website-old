@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionHeading } from '~/components';
+import { SectionHeading, Button } from '~/components';
 
 const About = () => {
 	return (
 		<section
-			className='mx-auto my-24 h-full w-full max-w-7xl px-8 py-12'
+			className='mx-auto my-24 h-full w-full max-w-screen-2xl px-8 py-12'
 			id='about'
 		>
 			<div className='mb-24 flex sm:justify-center'>
@@ -13,7 +13,7 @@ const About = () => {
 			</div>
 
 			<div className='flex flex-col gap-8 md:flex-row'>
-				<div>
+				<div className='flex flex-col gap-8'>
 					<h3 className='font-raleway text-4xl font-semibold md:text-5xl'>
 						Who are we?
 					</h3>
@@ -32,9 +32,7 @@ const About = () => {
 						striving to solve the various problem with an
 						entrepreneurial minsdset.
 					</p>
-					<button className='rounded bg-indigo-500 px-4 py-2 font-medium text-white transition-all hover:bg-indigo-600 active:scale-95'>
-						More
-					</button>
+					<Button>More</Button>
 				</div>
 				<ShuffleGrid />
 			</div>
@@ -59,7 +57,7 @@ const shuffle = (array: (typeof squareData)[0][]) => {
 	return array;
 };
 
-const squareData = Array(16)
+const squareData = Array(6)
 	.fill(1)
 	.map((_, index) => {
 		return {
@@ -74,7 +72,7 @@ const generateSquares = () => {
 			key={sq.id}
 			layout
 			transition={{ duration: 1.5, type: 'spring' }}
-			className='h-full w-full'
+			className='h-full w-full rounded-md'
 			style={{
 				backgroundImage: `url(${sq.src})`,
 				backgroundSize: 'cover',
@@ -100,7 +98,7 @@ const ShuffleGrid = () => {
 	};
 
 	return (
-		<div className='grid h-[450px] w-full max-w-lg grid-cols-3 grid-rows-4 gap-1 sm:grid-cols-4 sm:grid-rows-4'>
+		<div className='grid h-[32rem] w-full max-w-2xl grid-cols-2 grid-rows-3 gap-1 sm:h-[450px] sm:grid-cols-3 sm:grid-rows-2'>
 			{squares.map((sq) => sq)}
 		</div>
 	);

@@ -53,3 +53,27 @@ body::-webkit-scrollbar-thumb {
 .animateUnderline:hover::before {
 	transform: scaleX(1);
 }
+
+.button-gradient {
+	background: hsla(189, 71%, 61%, 1);
+
+	background: linear-gradient(
+		45deg,
+		hsla(189, 71%, 61%, 1) 0%,
+		hsla(221, 100%, 55%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		45deg,
+		hsla(189, 71%, 61%, 1) 0%,
+		hsla(221, 100%, 55%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		45deg,
+		hsla(189, 71%, 61%, 1) 0%,
+		hsla(221, 100%, 55%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#56CDE2", endColorstr="#1C64FF", GradientType=1 );
+}

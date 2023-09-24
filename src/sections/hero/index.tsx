@@ -28,7 +28,7 @@ export default function MultiLayerParallax() {
 			>
 				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider text-textPrimary'>
 					<motion.div
-						className='text-[1rem] sm:text-lg'
+						className='sm:text-xl'
 						initial='hidden'
 						animate='visible'
 						variants={textVariants({
