@@ -71,12 +71,12 @@ const FloatingMenu = () => {
 			custom={1000}
 		>
 			<div className='flex h-full flex-col justify-end p-8 py-16'>
-				<div className='flex flex-col gap-12'>
+				<div className='flex flex-col gap-6'>
 					{links.map((link, index) => (
 						<motion.div
 							onClick={() => handleLinkClick(link.href)}
 							key={index}
-							className='animateUnderline w-fit cursor-pointer font-adieuRegular text-4xl font-semibold transition-all duration-300 ease-in-out hover:text-5xl hover:text-primary sm:text-8xl sm:hover:text-9xl'
+							className='animateUnderline w-fit cursor-pointer font-adieuRegular text-4xl font-semibold transition-all duration-300 ease-in-out hover:text-5xl hover:text-primary sm:text-6xl sm:hover:text-7xl'
 							variants={MenuItemVariants(index)}
 							initial={false}
 							animate={open ? 'visible' : 'hidden'}
