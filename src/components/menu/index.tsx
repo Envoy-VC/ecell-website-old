@@ -70,7 +70,7 @@ const FloatingMenu = () => {
 			animate={open ? 'open' : 'closed'}
 			custom={1000}
 		>
-			<div className='flex h-full flex-col justify-end border-2 border-black p-8 py-16'>
+			<div className='flex h-full flex-col justify-end p-8 py-16'>
 				<div className='flex flex-col gap-12'>
 					{links.map((link, index) => (
 						<motion.div

@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 	height: 4px;
 	bottom: -8px;
 	left: 0;
-	background-color: #73b3dd;
+	background-color: #4F78FF;
 	transform: scaleX(0);
 	transition: transform 0.35s ease;
 }

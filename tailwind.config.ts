@@ -9,7 +9,8 @@ export default {
 				raleway: ['Raleway', 'sans-serif'],
 			},
 			colors: {
-				primary: '#73B3DD',
+				primary: '#4F78FF',
+				secondary: '#4FADFF',
 				textPrimary: '#252930',
 			},
 		},
