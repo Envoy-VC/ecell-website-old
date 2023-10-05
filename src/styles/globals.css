@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 	height: 4px;
 	bottom: -8px;
 	left: 0;
-	background-color: #4F78FF;
+	background-color: #4f78ff;
 	transform: scaleX(0);
 	transition: transform 0.35s ease;
 }
@@ -55,25 +55,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .button-gradient {
-	background: hsla(189, 71%, 61%, 1);
-
+	background: hsla(226, 100%, 65%, 1);
 	background: linear-gradient(
 		45deg,
-		hsla(189, 71%, 61%, 1) 0%,
-		hsla(221, 100%, 55%, 1) 100%
+		hsla(226, 100%, 65%, 1) 0%,
+		hsla(197, 100%, 65%, 1) 100%
 	);
-
 	background: -moz-linear-gradient(
 		45deg,
-		hsla(189, 71%, 61%, 1) 0%,
-		hsla(221, 100%, 55%, 1) 100%
+		hsla(226, 100%, 65%, 1) 0%,
+		hsla(197, 100%, 65%, 1) 100%
 	);
-
 	background: -webkit-linear-gradient(
 		45deg,
-		hsla(189, 71%, 61%, 1) 0%,
-		hsla(221, 100%, 55%, 1) 100%
+		hsla(226, 100%, 65%, 1) 0%,
+		hsla(197, 100%, 65%, 1) 100%
 	);
-
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#56CDE2", endColorstr="#1C64FF", GradientType=1 );
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4F78FF", endColorstr="#4FCDFF", GradientType=1 );
 }
