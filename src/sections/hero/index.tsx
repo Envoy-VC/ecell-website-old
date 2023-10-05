@@ -75,19 +75,13 @@ export default function MultiLayerParallax() {
 			</motion.div>
 
 			<motion.div
-				className='absolute inset-0 z-0'
+				className='absolute inset-0 z-0 h-screen w-full bg-fixed object-cover'
 				style={{
 					y: backgroundY,
+					backgroundAttachment: 'fixed',
+					background: 'url(/hero.webp) center center no-repeat',
 				}}
-			>
-				<Image
-					src='/hero.webp'
-					alt='Hero Image'
-					width={1920}
-					height={1080}
-					className='bottom-0 h-screen w-full object-cover'
-				/>
-			</motion.div>
+			></motion.div>
 		</div>
 	);
 }

@@ -9,7 +9,7 @@ const Navbar = () => {
 	const router = useRouter();
 	return (
 		<nav className='fixed top-0 z-[10000] flex w-full'>
-			<div className='flex w-full flex-row items-center justify-between p-5 px-8'>
+			<div className='flex w-full px-11 py-4 flex-row items-center justify-between'>
 				<Image
 					src={Logo.src}
 					alt='E-Cell Logo'

@@ -35,7 +35,7 @@ export const textVariants = ({
 
 export const sidebarVariants: Variants = {
 	open: (height = 1000) => ({
-		clipPath: `circle(${height * 3 + 200}px at 100% 40px)`,
+		clipPath: `circle(${height * 3 + 200}px at 97.6% 4vh)`,
 		transition: {
 			type: 'spring',
 			stiffness: 20,
