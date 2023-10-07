@@ -43,7 +43,7 @@ export const sidebarVariants: Variants = {
 		},
 	}),
 	closed: {
-		clipPath: 'circle(0px at 100% 0px)',
+		clipPath: 'circle(0px at 96.5% 4vh)',
 		transition: {
 			delay: 0.5,
 			type: 'spring',

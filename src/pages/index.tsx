@@ -21,7 +21,6 @@ const Home = () => {
 			<FloatingMenu />
 			<Hero />
 			<About />
-			<div className='h-screen'></div>
 		</main>
 	);
 };
