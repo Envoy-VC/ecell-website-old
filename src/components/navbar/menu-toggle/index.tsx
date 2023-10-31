@@ -15,14 +15,14 @@ const Path = (props: any) => (
 export const MenuToggle = () => {
 	const { open, setOpen } = useMenuStore();
 	return (
-		<div className='flex h-[3.15rem] w-[3.15rem] items-center justify-center rounded-full bg-white'>
+		<div className='flex h-12 w-12 items-center justify-center rounded-full bg-none'>
 			<button onClick={() => setOpen(!open)}>
 				<motion.svg
 					width='28'
 					height='28'
 					viewBox='0 0 23 23'
 					animate={open ? 'open' : 'closed'}
-					className='max-w-[24px] sm:max-w-[28px] w-full'
+					className='ml-[2px] mt-[3px] w-full max-w-[24px] sm:max-w-[28px]'
 				>
 					<Path
 						variants={{

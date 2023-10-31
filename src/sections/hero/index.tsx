@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+
+import BackgroundImage from '../../../public/bg-illustration.jpg';
 
 // Variants
 import { textVariants } from '~/utils/framer';
@@ -8,24 +10,9 @@ import { textVariants } from '~/utils/framer';
 import Typewriter from 'typewriter-effect';
 
 export default function MultiLayerParallax() {
-	const typewriterRef = React.useRef<HTMLElement>(null);
-	const ref = React.useRef(null);
-	const { scrollYProgress } = useScroll({
-		target: ref,
-		offset: ['start start', 'end start'],
-	});
-	const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-	const textY = useTransform(scrollYProgress, [0, 1], ['0%', '70%']);
-
 	return (
-		<div
-			ref={ref}
-			className='relative flex min-h-[130vh] w-full snap-start justify-center overflow-y-hidden'
-		>
-			<motion.div
-				style={{ y: textY }}
-				className={`relative z-10 mt-[16rem] px-4`}
-			>
+		<div className='relative flex h-screen w-full snap-start justify-center overflow-hidden'>
+			<motion.div className={`relative z-10 mt-[10rem] px-4`}>
 				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider text-textPrimary'>
 					<motion.div
 						className='sm:text-xl'
@@ -33,7 +20,7 @@ export default function MultiLayerParallax() {
 						animate='visible'
 						variants={textVariants({
 							direction: 'y',
-							from: 200,
+							from: 50,
 							delay: 0.25,
 						})}
 					>
@@ -60,28 +47,27 @@ export default function MultiLayerParallax() {
 						animate='visible'
 						variants={textVariants({
 							direction: 'y',
-							from: 200,
+							from: 50,
 							delay: 0.6,
 						})}
 					>
-						<div className='text-[2.15rem] sm:text-5xl lg:text-6xl xl:text-8xl'>
+						<div className='text-[2.15rem] sm:text-[2.9rem] lg:text-6xl xl:text-7xl'>
 							Entrepreneurship Cell
 						</div>
-						<div className='text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl'>
+						<div className='text-[2rem] sm:text-4xl lg:text-5xl xl:text-6xl'>
 							NIT Agartala
 						</div>
 					</motion.div>
 				</div>
 			</motion.div>
-
-			<motion.div
-				className='absolute inset-0 z-0 h-screen w-full bg-fixed object-cover'
-				style={{
-					y: backgroundY,
-					backgroundAttachment: 'fixed',
-					background: 'url(/hero.webp) center center no-repeat',
-				}}
-			></motion.div>
+			<Image
+				src={BackgroundImage.src}
+				alt='Background Illustration Illustration'
+				className='absolute bottom-0 z-0 min-w-[1024px] translate-y-[40%] object-cover sm:min-w-[1280px] sm:translate-y-[50%] lg:min-w-[1300px] xl:min-w-[1536px]'
+				width={1280}
+				height={1280}
+				priority={true}
+			/>
 		</div>
 	);
 }
