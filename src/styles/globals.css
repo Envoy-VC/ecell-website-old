@@ -19,15 +19,15 @@ main {
 /* Custom Scrollbar */
 
 body::-webkit-scrollbar {
-	width: 8px;
+	width: 0px;
 }
 
 body::-webkit-scrollbar-track {
-	background: #b6d6ee;
+	background: #ffffff;
 }
 
 body::-webkit-scrollbar-thumb {
-	background: #3a7a92;
+	background: #bdbdbd;
 	border-radius: 12px;
 }
 
