@@ -61,7 +61,7 @@ export default function MultiLayerParallax() {
 						</div>
 						<Link href='#about'>
 							<motion.button
-								whileHover={{ scale: 1.025 }}
+								whileHover={{ scale: 1.04 }}
 								whileTap={{ scale: 0.99 }}
 								className='mx-auto mt-8 flex w-fit flex-row items-center gap-2 rounded-3xl border-2 border-black px-4 py-2 text-lg shadow-sm'
 							>

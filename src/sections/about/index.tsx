@@ -5,7 +5,7 @@ import { SectionHeading, Button } from '~/components';
 const About = () => {
 	return (
 		<section
-			className='mx-auto my-24 h-full w-full max-w-screen-2xl px-8 py-12'
+			className='mx-auto flex min-h-screen w-full max-w-screen-2xl flex-col justify-center px-8 py-24'
 			id='about'
 		>
 			<div className='mb-24 flex sm:justify-center'>
