@@ -8,7 +8,7 @@ import { MenuToggle } from './menu-toggle';
 const Navbar = () => {
 	const router = useRouter();
 	return (
-		<nav className='fixed top-0 z-[10000] flex w-full'>
+		<nav className='fixed top-0 z-[10000] flex w-full bg-white'>
 			<div className='flex w-full px-11 py-4 flex-row items-center justify-between'>
 				<Image
 					src={Logo.src}

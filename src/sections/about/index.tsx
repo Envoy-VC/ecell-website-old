@@ -1,41 +1,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionHeading, Button } from '~/components';
+import { SectionHeading, Button, InfiniteMarquee } from '~/components';
+import { MarqueeItems } from '~/components/infinite-marquee';
 
 const About = () => {
 	return (
-		<section
-			className='mx-auto flex min-h-screen w-full max-w-screen-2xl flex-col justify-center px-8 py-24'
-			id='about'
-		>
-			<div className='mb-24 flex sm:justify-center'>
-				<SectionHeading title='About Us' />
-			</div>
-
-			<div className='flex flex-col gap-8 md:flex-row'>
-				<div className='flex flex-col gap-8'>
-					<h3 className='font-raleway text-4xl font-semibold md:text-5xl'>
-						Who are we?
-					</h3>
-					<p className='my-4 max-w-3xl font-raleway text-base text-slate-700 md:my-6 md:text-lg'>
-						The Entrepreneurship Cell is a non-profit organization
-						run by the students of National Institute of Technology
-						Agartala that aims at manifesting the latent
-						entrepreneurial spirit of the young students. E-Cell
-						aims at promoting the startup culture in Agartala as
-						well as North-East India. With various undergoing
-						projects, few successful startups, a lot of failures,
-						and the flagship Carpediem E-Summit, E-Cell has
-						transformed itself from a small community established by
-						budding entrepreneurs in 2017 to a full-fledged
-						organization with multi-talented like-minded people
-						striving to solve the various problem with an
-						entrepreneurial minsdset.
-					</p>
-					<Button>More</Button>
+		<section className='flex min-h-screen w-full flex-col' id='about'>
+			<div className='mx-auto flex w-full max-w-screen-2xl flex-col justify-center px-8  py-24'>
+				<div className='mb-24 flex sm:justify-center'>
+					<SectionHeading title='About Us' />
 				</div>
-				<ShuffleGrid />
+
+				<div className='flex flex-col gap-8 md:flex-row'>
+					<div className='flex flex-col gap-8'>
+						<h3 className='font-raleway text-4xl font-semibold md:text-5xl'>
+							Who are we?
+						</h3>
+						<p className='my-4 max-w-3xl font-raleway text-base text-slate-700 md:my-6 md:text-lg'>
+							The Entrepreneurship Cell is a non-profit
+							organization run by the students of National
+							Institute of Technology Agartala that aims at
+							manifesting the latent entrepreneurial spirit of the
+							young students. E-Cell aims at promoting the startup
+							culture in Agartala as well as North-East India.
+							With various undergoing projects, few successful
+							startups, a lot of failures, and the flagship
+							Carpediem E-Summit, E-Cell has transformed itself
+							from a small community established by budding
+							entrepreneurs in 2017 to a full-fledged organization
+							with multi-talented like-minded people striving to
+							solve the various problem with an entrepreneurial
+							minsdset.
+						</p>
+						<Button>More</Button>
+					</div>
+					<ShuffleGrid />
+				</div>
 			</div>
+			<InfiniteMarquee>
+				<MarqueeItems />
+			</InfiniteMarquee>
 		</section>
 	);
 };

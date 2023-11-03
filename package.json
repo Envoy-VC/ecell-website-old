@@ -9,7 +9,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@14islands/r3f-scroll-rig": "^8.12.3",
+    "@ant-design/cssinjs": "^1.17.2",
+    "@react-three/fiber": "^8.15.9",
     "@t3-oss/env-nextjs": "^0.7.1",
+    "antd": "^5.10.3",
     "framer-motion": "^10.16.4",
     "next": "^14.0.1",
     "react": "18.2.0",

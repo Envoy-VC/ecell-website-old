@@ -4,6 +4,8 @@ import { create } from 'zustand';
 import { Navbar, FloatingMenu } from '~/components';
 import { Hero, About } from '~/sections';
 
+import { FloatButton } from 'antd';
+
 interface MenuState {
 	open: boolean;
 	setOpen: (open: boolean) => void;
@@ -16,12 +18,14 @@ export const useMenuStore = create<MenuState>((set) => ({
 
 const Home = () => {
 	return (
-		<main>
+		<>
 			<Navbar />
 			<FloatingMenu />
 			<Hero />
 			<About />
-		</main>
+			<div className='h-screen'></div>
+			<FloatButton.BackTop visibilityHeight={1000} duration={650} />
+		</>
 	);
 };
 
