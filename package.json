@@ -1,48 +1,49 @@
 {
-  "name": "ecell-website",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@14islands/r3f-scroll-rig": "^8.12.3",
-    "@ant-design/cssinjs": "^1.17.2",
-    "@react-three/fiber": "^8.15.9",
-    "@t3-oss/env-nextjs": "^0.7.1",
-    "antd": "^5.10.3",
-    "framer-motion": "^10.16.4",
-    "next": "^14.0.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.11.0",
-    "scroller-motion": "^1.2.3",
-    "tailwind-merge": "^2.0.0",
-    "typewriter-effect": "^2.21.0",
-    "usehooks-ts": "^2.9.1",
-    "zod": "^3.22.4",
-    "zustand": "^4.4.4"
-  },
-  "devDependencies": {
-    "@types/eslint": "^8.44.6",
-    "@types/node": "^20.8.10",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.52.0",
-    "eslint-config-next": "^14.0.1",
-    "postcss": "^8.4.31",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2"
-  },
-  "ct3aMetadata": {
-    "initVersion": "7.19.0"
-  }
+	"name": "ecell-website",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev",
+		"lint": "next lint",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@14islands/r3f-scroll-rig": "^8.12.3",
+		"@ant-design/cssinjs": "^1.17.2",
+		"@react-three/fiber": "^8.15.9",
+		"@t3-oss/env-nextjs": "^0.7.1",
+		"antd": "^5.10.3",
+		"framer-motion": "^10.16.4",
+		"next": "^14.0.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-icons": "^4.11.0",
+		"scroller-motion": "^1.2.3",
+		"tailwind-merge": "^2.0.0",
+		"typewriter-effect": "^2.21.0",
+		"usehooks-ts": "^2.9.1",
+		"zod": "^3.22.4",
+		"zustand": "^4.4.4"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.44.6",
+		"@types/node": "^20.8.10",
+		"@types/react": "^18.2.33",
+		"@types/react-dom": "^18.2.14",
+		"@typescript-eslint/eslint-plugin": "^6.9.1",
+		"@typescript-eslint/parser": "^6.9.1",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.52.0",
+		"eslint-config-next": "^14.0.1",
+		"postcss": "^8.4.31",
+		"prettier": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.5.6",
+		"tailwindcss": "^3.3.5",
+		"typescript": "^5.2.2"
+	},
+	"ct3aMetadata": {
+		"initVersion": "7.19.0"
+	},
+	"packageManager": "pnpm@8.9.0"
 }
