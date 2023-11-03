@@ -1,91 +1,85 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { motion, Variants } from 'framer-motion';
-import { useMenuStore } from '~/pages';
+import { motion } from 'framer-motion';
 
-import { sidebarVariants } from '~/utils/framer';
+// Utils
+import { menuSlide } from '~/utils/framer';
 
-interface LinkProps {
-	label: React.ReactNode;
+import SVGCurve from './curve';
+import MenuPageItem from './link';
+
+export interface LinkProps {
+	title: React.ReactNode;
 	href: string;
 }
 
 const links: LinkProps[] = [
 	{
-		label: 'Home',
-		href: '/',
+		title: 'Home',
+		href: '',
 	},
 	{
-		label: 'About Us',
+		title: 'About Us',
 		href: '#about',
 	},
 	{
-		label: 'Initiatives',
+		title: 'Initiatives',
 		href: '#initiatives',
 	},
 	{
-		label: 'Our Team',
+		title: 'Our Team',
 		href: '#team',
 	},
 	{
-		label: 'Reach out',
+		title: 'Reach out',
 		href: '#reach-out',
 	},
 ];
 
 const FloatingMenu = () => {
 	const router = useRouter();
-	const { open, setOpen } = useMenuStore();
 
-	const MenuItemVariants = (index: number): Variants => {
-		return {
-			hidden: {
-				opacity: 0,
-				x: 324,
-			},
-			visible: {
-				opacity: 1,
-				x: 0,
-				transition: {
-					type: 'tween',
-					duration: 0.25,
-					delay: 0.15 + 0.05 * index,
-				},
-			},
-		};
-	};
-
-	const handleLinkClick = (href: string) => {
-		setOpen(false);
-		setTimeout(() => {
-			router.push(href);
-		}, 1000);
-	};
+	const [selectedIndicator, setSelectedIndicator] = React.useState<string>(
+		router.asPath.slice(1)
+	);
 
 	return (
 		<motion.div
-			className='fixed z-[1000] h-screen w-full bg-white'
-			variants={sidebarVariants}
-			initial={false}
-			animate={open ? 'open' : 'closed'}
-			custom={1000}
+			className='z-1 fixed right-0 top-0 h-screen w-full max-w-sm bg-[#292929] text-white sm:max-w-xl'
+			variants={menuSlide}
+			initial='initial'
+			animate='enter'
+			exit='exit'
 		>
-			<div className='flex h-full flex-col justify-end p-8 py-16 '>
-				<div className='flex flex-col gap-6'>
-					{links.map((link, index) => (
-						<motion.div
-							onClick={() => handleLinkClick(link.href)}
-							key={index}
-							className='animateUnderline w-fit cursor-pointer font-adieuRegular text-4xl font-semibold transition-all duration-300 ease-in-out hover:text-5xl hover:text-primary sm:text-6xl sm:hover:text-7xl'
-							variants={MenuItemVariants(index)}
-							initial={false}
-							animate={open ? 'visible' : 'hidden'}
-						>
-							{link.label}
-						</motion.div>
-					))}
+			<div className='flex h-full flex-col justify-around gap-4 p-16 sm:p-24'>
+				<div>
+					<div className='mb-16 flex flex-col gap-2'>
+						<div className='text-sm uppercase text-[#999999]'>
+							Navigation
+						</div>
+						<div className='border-2 border-[#999999]' />
+					</div>
+					<div className='flex flex-col gap-6'>
+						{links.map((link, index) => {
+							return (
+								<MenuPageItem
+									key={index}
+									data={{ ...link, index }}
+									isActive={selectedIndicator == link.href}
+									setSelectedIndicator={setSelectedIndicator}
+								></MenuPageItem>
+							);
+						})}
+					</div>
+				</div>
+				<div className='mx-auto flex w-full max-w-sm flex-row items-center justify-between gap-4 text-sm  font-medium'>
+					<div>Instagram</div>
+					<div>LinkedIn</div>
+					<div>Twitter</div>
+					<div>GitHub</div>
 				</div>
 			</div>
+			<SVGCurve />
 		</motion.div>
 	);
 };

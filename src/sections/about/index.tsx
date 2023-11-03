@@ -5,8 +5,11 @@ import { MarqueeItems } from '~/components/infinite-marquee';
 
 const About = () => {
 	return (
-		<section className='flex min-h-screen w-full flex-col' id='about'>
-			<div className='mx-auto flex w-full max-w-screen-2xl flex-col justify-center px-8  py-24'>
+		<section
+			className='flex min-h-screen w-full flex-col justify-between'
+			id='about'
+		>
+			<div className='mx-auto flex w-full max-w-screen-2xl flex-col justify-center px-8 py-24'>
 				<div className='mb-24 flex sm:justify-center'>
 					<SectionHeading title='About Us' />
 				</div>

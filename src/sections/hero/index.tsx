@@ -75,7 +75,7 @@ export default function MultiLayerParallax() {
 						<div className='text-[2rem] sm:text-4xl lg:text-5xl xl:text-6xl'>
 							NIT Agartala
 						</div>
-						<Link href='#about'>
+						<Link href='#about' className='mx-auto w-fit'>
 							<motion.button
 								whileHover={{ scale: 1.04 }}
 								whileTap={{ scale: 0.99 }}

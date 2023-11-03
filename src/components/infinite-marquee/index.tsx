@@ -42,6 +42,9 @@ const InfiniteMarquee = ({
 					<div className='flex min-w-full shrink-0 items-center justify-start gap-16 overflow-x-hidden will-change-transform'>
 						{children}
 					</div>
+					<div className='flex min-w-full shrink-0 items-center justify-start gap-16 overflow-x-hidden will-change-transform'>
+						{children}
+					</div>
 				</motion.div>
 			</div>
 		</div>
