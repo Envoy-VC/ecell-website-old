@@ -9,17 +9,10 @@
 	src: url('../../public/fonts/Adieu-Regular.otf');
 }
 
-html,
-body,
-main {
-	overscroll-behavior: none;
-	scroll-behavior: smooth;
-}
-
 /* Custom Scrollbar */
 
 body::-webkit-scrollbar {
-	width: 8px;
+	width: 6px;
 }
 
 body::-webkit-scrollbar-track {

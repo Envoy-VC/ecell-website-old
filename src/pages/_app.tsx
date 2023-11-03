@@ -10,7 +10,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
 			<GlobalCanvas style={{ zIndex: -1 }}>
 				<ambientLight />
 			</GlobalCanvas>
-			<SmoothScrollbar disablePointerOnScroll={false} enabled={false}>
+			<SmoothScrollbar disablePointerOnScroll={false}>
 				{(bind) => (
 					<div {...bind} className='h-screen'>
 						<Component {...pageProps} />
