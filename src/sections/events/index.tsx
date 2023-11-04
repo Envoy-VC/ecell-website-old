@@ -6,7 +6,7 @@ import { SectionHeading } from '~/components';
 const Events = () => {
 	return (
 		<section
-			className='mx-auto flex min-h-screen max-w-7xl flex-col justify-center gap-16 px-4 py-12 font-raleway text-slate-800'
+			className='mx-auto flex min-h-screen max-w-7xl flex-col justify-center gap-16 px-4 py-12 font-raleway text-slate-800 '
 			id='events'
 		>
 			<div className='mx-auto flex flex-col gap-8 text-center md:px-8'>
@@ -71,13 +71,13 @@ const BounceCard = ({ title, image, className, cardCls }: BounceCardProps) => {
 				{title}
 			</h3>
 			<div
-				className={`absolute bottom-0 left-4 right-4 top-32 min-h-full translate-y-8 rounded-t-2xl px-[5px] pt-[8px] transition-transform duration-[250ms] group-hover:-translate-y-24 group-hover:rotate-[2deg] ${cardCls}`}
+				className={`absolute bottom-0 left-4 right-4 top-32 min-h-full translate-y-8 rounded-t-2xl px-[5px] pt-[7px] transition-transform duration-[250ms] group-hover:-translate-y-24 group-hover:rotate-[2deg] ${cardCls}`}
 			>
 				<div className='flex h-full w-full justify-center'>
 					<Image
 						src={image}
 						preview={false}
-						className='h-full min-h-[280px] !w-full max-w-[768px] rounded-t-[13px] object-cover '
+						className='h-full min-h-[280px] !w-full max-w-[768px] rounded-t-[13px] object-cover'
 					/>
 				</div>
 			</div>

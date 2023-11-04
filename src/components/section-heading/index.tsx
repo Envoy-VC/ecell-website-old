@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion, stagger, useAnimate, animate } from 'framer-motion';
-
-interface SectionHeadingProps {
+import clsx from 'clsx';
+interface SectionHeadingProps extends React.ComponentProps<'div'> {
 	title: string;
 }
 
-const SectionHeading = ({ title }: SectionHeadingProps) => {
+const SectionHeading = ({
+	title,
+	className,
+	...props
+}: SectionHeadingProps) => {
 	const [scope, animate] = useAnimate();
 
 	const onHover = () => {
@@ -29,7 +33,10 @@ const SectionHeading = ({ title }: SectionHeadingProps) => {
 			<div ref={scope} className='flex flex-col'>
 				<span className='sr-only'>{title}</span>
 				<motion.div
-					className='block h-[3.75rem] overflow-hidden font-adieuRegular text-5xl font-bold leading-[3.75rem] text-textPrimary sm:text-6xl'
+					className={clsx(
+						'block h-[3.75rem] overflow-hidden font-adieuRegular text-5xl font-bold leading-[3.75rem] text-textPrimary sm:text-6xl',
+						className
+					)}
 					aria-hidden
 					onHoverStart={onHover}
 				>
@@ -54,7 +61,7 @@ const SectionHeading = ({ title }: SectionHeadingProps) => {
 					})}
 				</motion.div>
 			</div>
-			<div className='translate-x-[-100%] overflow-hidden border-[3px] border-primary transition-all duration-300 ease-out group-hover:translate-x-[0%]' />
+			<div className='translate-x-[-100%] overflow-hidden border-[3px] border-primary transition-all duration-500 ease-out group-hover:translate-x-[0%]' />
 		</div>
 	);
 };

@@ -4,6 +4,7 @@ import SectionHeading from './section-heading';
 import { FollowerPointerCard } from './follow-pointer/card';
 import Button from './custom-button';
 import InfiniteMarquee from './infinite-marquee';
+import TimelineEvent from './timeline-event';
 
 export {
 	Navbar,
@@ -12,4 +13,5 @@ export {
 	FollowerPointerCard,
 	Button,
 	InfiniteMarquee,
+	TimelineEvent,
 };
