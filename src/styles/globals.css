@@ -24,29 +24,6 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 12px;
 }
 
-/*   Text Styles   */
-
-.animateUnderline {
-	position: relative;
-	text-decoration: none;
-}
-
-.animateUnderline::before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 4px;
-	bottom: -8px;
-	left: 0;
-	background-color: #4f78ff;
-	transform: scaleX(0);
-	transition: transform 0.35s ease;
-}
-
-.animateUnderline:hover::before {
-	transform: scaleX(1);
-}
-
 .button-gradient {
 	background: hsla(226, 100%, 65%, 1);
 	background: linear-gradient(

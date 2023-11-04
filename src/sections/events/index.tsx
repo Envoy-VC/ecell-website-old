@@ -6,14 +6,14 @@ import { SectionHeading } from '~/components';
 const Events = () => {
 	return (
 		<section
-			className='mx-auto flex min-h-screen max-w-7xl flex-col justify-center gap-16 px-4 py-12 text-slate-800'
+			className='mx-auto flex min-h-screen max-w-7xl flex-col justify-center gap-16 px-4 py-12 font-raleway text-slate-800'
 			id='events'
 		>
 			<div className='mx-auto flex flex-col gap-8 text-center md:px-8'>
 				<div className='mx-auto w-fit'>
 					<SectionHeading title='Events' />
 				</div>
-				<h2 className='max-w-3xl font-raleway text-2xl font-bold md:text-4xl'>
+				<h2 className='max-w-3xl text-2xl font-bold md:text-4xl'>
 					Where innovation and
 					<span className='text-slate-400'>
 						{' '}

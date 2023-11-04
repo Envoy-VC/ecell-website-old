@@ -38,10 +38,7 @@ const InfiniteMarquee = ({
 	return (
 		<div className='overflow-hidden bg-black text-white' ref={track}>
 			<div {...props} className=' animate-slider'>
-				<motion.div
-					className={'flex select-none gap-8'}
-					style={{ x }}
-				>
+				<motion.div className={'flex select-none gap-8'} style={{ x }}>
 					<div className='flex min-w-full shrink-0 items-center justify-start gap-16 overflow-x-hidden will-change-transform'>
 						{children}
 					</div>
@@ -64,7 +61,7 @@ interface MarqueeElementProps {
 const MarqueeElement = ({ title, image }: MarqueeElementProps) => {
 	return (
 		<div className='flex flex-row items-center gap-4 text-[8rem] sm:gap-8'>
-			<div className='flex w-full max-w-[10rem] sm:max-w-[18rem] items-center justify-center'>
+			<div className='flex w-full max-w-[10rem] items-center justify-center sm:max-w-[18rem]'>
 				<Image
 					src={image}
 					className='marquee-item-shadow- max-h-[3.75rem] min-w-[10rem] rounded-full object-cover sm:max-h-[7rem] sm:min-w-[18rem]'
@@ -72,7 +69,7 @@ const MarqueeElement = ({ title, image }: MarqueeElementProps) => {
 					preview={false}
 				/>
 			</div>
-			<div className='mb-2 text-[3rem] font-medium uppercase tracking-wide sm:text-[7rem]'>
+			<div className='font-raleway text-[3rem] font-medium uppercase sm:text-[7rem]'>
 				{title}
 			</div>
 		</div>
@@ -91,7 +88,7 @@ export const MarqueeItems = () => {
 				image='https://img.freepik.com/free-photo/abstract-yellow-rocket-ship-concept-cartoon-style_90220-1413.jpg'
 			/>
 			<MarqueeElement
-				title='MVP'
+				title='Pitch deck'
 				image='https://img.freepik.com/free-photo/teamwork-strategy-lead-business-success-generated-by-ai_188544-40981.jpg'
 			/>
 		</>
