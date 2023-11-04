@@ -37,7 +37,7 @@ const InfiniteMarquee = ({
 	});
 	return (
 		<div className='overflow-hidden bg-black text-white' ref={track}>
-			<div {...props} className=''>
+			<div {...props} className=' animate-slider'>
 				<motion.div className={'flex select-none gap-8'} style={{ x }}>
 					<div className='flex min-w-full shrink-0 items-center justify-start gap-16 overflow-x-hidden will-change-transform'>
 						{children}

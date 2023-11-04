@@ -10,6 +10,7 @@ export default {
 			},
 			animation: {
 				text: 'text 10s ease infinite',
+				slider: 'slider 20s linear infinite',
 			},
 			keyframes: {
 				text: {
@@ -20,6 +21,14 @@ export default {
 					'50%': {
 						'background-size': '300% 300%',
 						'background-position': 'right center',
+					},
+				},
+				slider: {
+					from: {
+						transform: 'translate3d(0, 0, 0)',
+					},
+					to: {
+						transform: 'translate3d(-100%, 0, 0)',
 					},
 				},
 			},
