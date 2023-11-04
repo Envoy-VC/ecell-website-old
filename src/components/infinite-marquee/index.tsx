@@ -38,7 +38,10 @@ const InfiniteMarquee = ({
 	return (
 		<div className='overflow-hidden bg-black text-white' ref={track}>
 			<div {...props} className=' animate-slider'>
-				<motion.div className={'flex select-none gap-8'} style={{ x }}>
+				<motion.div
+					className={'flex select-none gap-8'}
+					style={{ x }}
+				>
 					<div className='flex min-w-full shrink-0 items-center justify-start gap-16 overflow-x-hidden will-change-transform'>
 						{children}
 					</div>
@@ -60,16 +63,16 @@ interface MarqueeElementProps {
 
 const MarqueeElement = ({ title, image }: MarqueeElementProps) => {
 	return (
-		<div className='flex flex-row items-center gap-8 text-[8rem]'>
-			<div className='flex w-full max-w-[18rem] items-center justify-center'>
+		<div className='flex flex-row items-center gap-4 text-[8rem] sm:gap-8'>
+			<div className='flex w-full max-w-[10rem] sm:max-w-[18rem] items-center justify-center'>
 				<Image
 					src={image}
-					className='marquee-item-shadow max-h-[5rem] min-w-[10rem] rounded-full object-cover sm:max-h-[8rem] sm:min-w-[16rem]'
+					className='marquee-item-shadow- max-h-[3.75rem] min-w-[10rem] rounded-full object-cover sm:max-h-[7rem] sm:min-w-[18rem]'
 					alt={title}
 					preview={false}
 				/>
 			</div>
-			<div className='mb-2 font-adieuRegular text-[4rem] font-medium sm:text-[7rem]'>
+			<div className='mb-2 text-[3rem] font-medium uppercase tracking-wide sm:text-[7rem]'>
 				{title}
 			</div>
 		</div>
