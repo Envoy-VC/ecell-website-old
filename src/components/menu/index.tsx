@@ -23,6 +23,10 @@ const links: LinkProps[] = [
 		href: '#about',
 	},
 	{
+		title: 'Events',
+		href: '#events',
+	},
+	{
 		title: 'Initiatives',
 		href: '#initiatives',
 	},
