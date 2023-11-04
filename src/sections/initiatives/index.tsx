@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { SectionHeading, TimelineEvent } from '~/components';
+import { SectionHeading, TimelineEvent, ImageCard } from '~/components';
 
 import { Initiatives } from '~/utils/data';
 
@@ -36,7 +36,7 @@ const Initiative = () => {
 								);
 							} else
 								return (
-									<img
+									<ImageCard
 										key={index}
 										src={initiative.image}
 										alt='abc'
@@ -63,7 +63,7 @@ const Initiative = () => {
 								.map((_, index) => (
 									<div
 										key={index}
-										className='top-5 h-5 w-5 translate-y-10 rounded-full border-4 border-slate-700 bg-gray-100 sm:h-8 sm:w-8 sm:border-[8px]'
+										className='top-5 h-5 w-5 translate-y-10 rounded-full border-4 border-gray-600 bg-gray-100 sm:h-8 sm:w-8 sm:border-[8px]'
 										title={''}
 									/>
 								))}
@@ -74,7 +74,7 @@ const Initiative = () => {
 						{Initiatives.map((initiative, index) => {
 							if (index % 2 == 0) {
 								return (
-									<img
+									<ImageCard
 										key={index}
 										src={initiative.image}
 										alt='abc'
