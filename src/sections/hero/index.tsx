@@ -1,7 +1,8 @@
 import React from 'react';
+import gsap from 'gsap';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 import BackgroundImage from '../../../public/bg-illustration.jpg';
 import { HiCursorClick } from 'react-icons/hi';
@@ -20,8 +21,17 @@ const ExploreIcons = [
 ];
 
 export default function MultiLayerParallax() {
+	const router = useRouter();
 	const [exploreIcon, setExploreIcon] = React.useState(0);
 	const typewriterRef = React.useRef<HTMLDivElement>(null);
+
+	const onClick = () => {
+		gsap.registerPlugin(ScrollToPlugin);
+		gsap.to(window as object, {
+			duration: 0.5,
+			scrollTo: { y: '#about' },
+		}).then((res) => router.replace('#about'));
+	};
 
 	// Change Icon After each second
 	React.useEffect(() => {
@@ -32,7 +42,10 @@ export default function MultiLayerParallax() {
 		return () => clearInterval(interval);
 	}, []);
 	return (
-		<div className='relative flex h-screen w-full snap-start justify-center overflow-hidden'>
+		<section
+			className='relative flex h-screen w-full snap-start justify-center overflow-hidden'
+			id='hero'
+		>
 			<motion.div className={`relative z-10 mt-[6rem] px-4`}>
 				<div className='flex flex-col items-center gap-4 text-center font-adieuRegular font-black tracking-wider text-textPrimary'>
 					<motion.div
@@ -75,16 +88,15 @@ export default function MultiLayerParallax() {
 						<div className='text-[2rem] sm:text-4xl lg:text-5xl xl:text-6xl'>
 							NIT Agartala
 						</div>
-						<Link href='#about' className='mx-auto w-fit'>
-							<motion.button
-								whileHover={{ scale: 1.04 }}
-								whileTap={{ scale: 0.99 }}
-								className='mx-auto mt-8 flex w-fit flex-row items-center gap-3 rounded-3xl border-2 border-black px-4 py-2 text-lg shadow-sm'
-							>
-								Explore
-								{ExploreIcons[exploreIcon]}
-							</motion.button>
-						</Link>
+						<motion.button
+							onClick={onClick}
+							whileHover={{ scale: 1.04 }}
+							whileTap={{ scale: 0.99 }}
+							className='mx-auto mt-8 flex w-fit flex-row items-center gap-3 rounded-3xl border-2 border-black px-4 py-2 text-lg shadow-sm'
+						>
+							Explore
+							{ExploreIcons[exploreIcon]}
+						</motion.button>
 					</motion.div>
 				</div>
 			</motion.div>
@@ -96,6 +108,6 @@ export default function MultiLayerParallax() {
 				height={1280}
 				priority={true}
 			/>
-		</div>
+		</section>
 	);
 }

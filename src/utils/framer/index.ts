@@ -116,3 +116,18 @@ export const mountAnim = {
 	animate: 'enter',
 	exit: 'exit',
 };
+
+export const cardFlip: Variants = {
+	initial: {
+		rotateY: 170,
+		transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
+	},
+	animate: {
+		rotateY: 360,
+		transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
+	},
+	exit: {
+		rotateY: 170,
+		transition: { duration: 0.8, ease: [0.33, 1, 0.68, 1] },
+	},
+};

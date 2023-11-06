@@ -1,4 +1,5 @@
 import React from 'react';
+import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
@@ -30,7 +31,15 @@ const MenuPageItem = ({
 	const { title, href, index } = data;
 
 	const onClick = (href: string) => {
-		router.push(href).then(() => setOpen(false));
+		gsap.registerPlugin(ScrollToPlugin);
+		if (href === 'team') {
+			router.push('/team');
+			return;
+		}
+		gsap.to(window as object, {
+			duration: 0.5,
+			scrollTo: { y: href },
+		}).then((res) => router.replace(href));
 	};
 
 	return (

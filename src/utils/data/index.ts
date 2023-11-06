@@ -1,4 +1,11 @@
-export const Initiatives = [
+interface InitiativeType {
+	title: string;
+	date: string;
+	description: string;
+	image: string;
+}
+
+export const Initiatives: InitiativeType[] = [
 	{
 		date: 'January 27, 2023',
 		title: 'Initiate',
@@ -32,3 +39,86 @@ export const Initiatives = [
 		image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	},
 ];
+
+export interface TeamType {
+	name: string;
+	members: TeamMember[];
+}
+
+export interface TeamMember {
+	name: string;
+	role: string;
+	image: string;
+	socials: Record<string, string>;
+}
+
+export const TechTeamDetails: TeamType = {
+	name: 'Tech Team',
+	members: [
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+		{
+			name: 'Sayan Mondal',
+			role: 'Web Developer',
+			image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004',
+			socials: {
+				github: 'https://avatars.githubusercontent.com/u/47265493?v=4',
+			},
+		},
+	
+	],
+};

@@ -16,7 +16,7 @@ export interface LinkProps {
 const links: LinkProps[] = [
 	{
 		title: 'Home',
-		href: '',
+		href: '#hero',
 	},
 	{
 		title: 'About Us',
@@ -32,7 +32,7 @@ const links: LinkProps[] = [
 	},
 	{
 		title: 'Our Team',
-		href: '#team',
+		href: 'team',
 	},
 	{
 		title: 'Reach out',

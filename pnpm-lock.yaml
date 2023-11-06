@@ -29,6 +29,12 @@ dependencies:
   framer-motion:
     specifier: ^10.16.4
     version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
+  gsap:
+    specifier: ^3.12.2
+    version: 3.12.2
+  gsap-trial:
+    specifier: ^3.12.2
+    version: 3.12.2
   next:
     specifier: ^14.0.1
     version: 14.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -64,6 +70,9 @@ dependencies:
     version: 4.4.4(@types/react@18.2.33)(react@18.2.0)
 
 devDependencies:
+  '@tailwindcss/aspect-ratio':
+    specifier: ^0.4.2
+    version: 0.4.2(tailwindcss@3.3.5)
   '@types/eslint':
     specifier: ^8.44.6
     version: 8.44.6
@@ -731,6 +740,14 @@ packages:
       typescript: 5.2.2
       zod: 3.22.4
     dev: false
+
+  /@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.3.5
+    dev: true
 
   /@types/draco3d@1.4.7:
     resolution: {integrity: sha512-sjx6hQ8UArRZf+2ZhpPkjJW8iCkyxar69/IElc9NHuGE40n0U9SuvxX59CHvF4xUH7qfJDQ2lIbANZ0HHJg+BQ==}
@@ -2144,6 +2161,14 @@ packages:
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
+
+  /gsap-trial@3.12.2:
+    resolution: {integrity: sha512-6oSqqRZB0jcJmCBmM8I6UECAAacZOn76r5/QOIOD4gewYxoWuecDt0A4oT5zAT1fhq40lWHYAgXfN9Kd8hWQcQ==}
+    dev: false
+
+  /gsap@3.12.2:
+    resolution: {integrity: sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==}
+    dev: false
 
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
