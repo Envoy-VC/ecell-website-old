@@ -34,12 +34,28 @@ const MenuPageItem = ({
 		gsap.registerPlugin(ScrollToPlugin);
 		if (href === 'team') {
 			router.push('/team');
+			setOpen(false);
 			return;
 		}
-		gsap.to(window as object, {
-			duration: 0.5,
-			scrollTo: { y: href },
-		}).then((res) => router.replace(href));
+		if (router.pathname === '/team' && href !== 'team') {
+			setOpen(false);
+			setTimeout(() => {
+				router.push('/').then((res) => {
+					gsap.to(window as object, {
+						duration: 0.5,
+						scrollTo: { y: href },
+					}).then((res) => router.replace(href));
+				});
+			}, 500);
+		} else {
+			setOpen(false);
+			setTimeout(() => {
+				gsap.to(window as object, {
+					duration: 0.5,
+					scrollTo: { y: href },
+				}).then((res) => router.replace(href));
+			}, 500);
+		}
 	};
 
 	return (
