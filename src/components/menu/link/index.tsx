@@ -42,11 +42,11 @@ const MenuPageItem = ({
 			setTimeout(() => {
 				router.push('/').then((res) => {
 					gsap.to(window as object, {
-						duration: 0.5,
+						duration: 1,
 						scrollTo: { y: href },
 					}).then((res) => router.replace(href));
 				});
-			}, 500);
+			}, 1000);
 		} else {
 			setOpen(false);
 			setTimeout(() => {
@@ -54,7 +54,7 @@ const MenuPageItem = ({
 					duration: 0.5,
 					scrollTo: { y: href },
 				}).then((res) => router.replace(href));
-			}, 500);
+			}, 1000);
 		}
 	};
 

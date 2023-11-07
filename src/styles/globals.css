@@ -78,3 +78,7 @@ body::-webkit-scrollbar-thumb {
 		rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
 		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
+
+.quadraticEase {
+	transition: all 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+}
