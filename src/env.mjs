@@ -3,10 +3,10 @@ import { z } from 'zod';
 
 export const env = createEnv({
 	client: {
-		// NEXT_PUBLIC_CLIENTVAR: z.string().min(1),
+		NEXT_PUBLIC_PASSWORD: z.string().min(1),
 	},
-	runtimeEnv: {
-		NODE_ENV: process.env.NODE_ENV,
+	experimental__runtimeEnv: {
+		NEXT_PUBLIC_PASSWORD: process.env.NEXT_PUBLIC_PASSWORD,
 	},
 	skipValidation: !!process.env.SKIP_ENV_VALIDATION,
 });

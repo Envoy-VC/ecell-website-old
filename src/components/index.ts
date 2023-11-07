@@ -8,6 +8,7 @@ import TimelineEvent from './timeline-event';
 import ImageCard from './image-card';
 import ContactForm from './contact-form';
 import SocialLinks from './social-links';
+import EmailTemplate from './email-template';
 
 export {
 	Navbar,
@@ -20,4 +21,5 @@ export {
 	ImageCard,
 	ContactForm,
 	SocialLinks,
+	EmailTemplate,
 };
