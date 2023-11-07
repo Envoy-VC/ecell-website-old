@@ -6,6 +6,8 @@ import Button from './custom-button';
 import InfiniteMarquee from './infinite-marquee';
 import TimelineEvent from './timeline-event';
 import ImageCard from './image-card';
+import ContactForm from './contact-form';
+import SocialLinks from './social-links';
 
 export {
 	Navbar,
@@ -16,4 +18,6 @@ export {
 	InfiniteMarquee,
 	TimelineEvent,
 	ImageCard,
+	ContactForm,
+	SocialLinks,
 };

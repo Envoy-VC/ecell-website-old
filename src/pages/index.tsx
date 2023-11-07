@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Navbar } from '~/components';
-import { Hero, About, Events, Initiative } from '~/sections';
+import { Hero, About, Events, Initiative, Contact } from '~/sections';
 
 import { FloatButton } from 'antd';
 
@@ -13,7 +13,7 @@ const Home = () => {
 			<About />
 			<Events />
 			<Initiative />
-			<div className='h-screen'></div>
+			<Contact />
 			<FloatButton.BackTop visibilityHeight={1000} duration={650} />
 		</main>
 	);

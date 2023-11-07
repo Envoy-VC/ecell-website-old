@@ -7,6 +7,7 @@ import { menuSlide } from '~/utils/framer';
 
 import SVGCurve from './curve';
 import MenuPageItem from './link';
+import SocialLinks from '../social-links';
 
 export interface LinkProps {
 	title: React.ReactNode;
@@ -76,11 +77,8 @@ const FloatingMenu = () => {
 						})}
 					</div>
 				</div>
-				<div className='mx-auto flex w-full max-w-sm flex-row items-center justify-between gap-4 text-sm  font-medium'>
-					<div>Instagram</div>
-					<div>LinkedIn</div>
-					<div>Twitter</div>
-					<div>GitHub</div>
+				<div className='mx-auto w-full max-w-[200px]'>
+					<SocialLinks isMenu />
 				</div>
 			</div>
 			<SVGCurve />
