@@ -1,9 +1,14 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { SectionHeading, Button, InfiniteMarquee } from '~/components';
 import { MarqueeItems } from '~/components/infinite-marquee';
 
 const About = () => {
+	const router = useRouter();
+	const onClick = () => {
+		router.push('/team');
+	};
 	return (
 		<section
 			className='flex min-h-screen w-full flex-col justify-between'
@@ -35,7 +40,7 @@ const About = () => {
 							solve the various problem with an entrepreneurial
 							minsdset.
 						</p>
-						<Button>More</Button>
+						<Button onClick={onClick}>Our Team</Button>
 					</div>
 					<ShuffleGrid />
 				</div>
