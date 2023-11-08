@@ -113,7 +113,7 @@ const ContactForm = () => {
 							},
 						]}
 					>
-						<FormTextareaInput placeholder='lorem ipsum dollar ' />
+						<FormTextareaInput placeholder='Your message ' />
 					</Form.Item>
 				</div>
 			</div>

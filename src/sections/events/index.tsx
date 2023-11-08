@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { Image } from 'antd';
 import { SectionHeading } from '~/components';
 
+import { eventsData } from '~/utils/data';
+
 const Events = () => {
+	const [event1, event2, event3, event4] = eventsData;
 	return (
 		<section
 			className='mx-auto flex min-h-screen max-w-7xl flex-col justify-center gap-16 px-4 py-12 font-raleway text-slate-800 '
@@ -25,13 +28,13 @@ const Events = () => {
 				<div className='mb-4 grid grid-cols-12 gap-4'>
 					<BounceCard
 						className='col-span-12 md:col-span-4'
-						title='Event 1'
-						image='https://img.freepik.com/free-photo/business-conference-event-background_1409-4882.jpg'
+						title={event1!.title}
+						image={event1!.image}
 						cardCls='bg-gradient-to-br from-violet-400 to-indigo-400'
 					/>
 					<BounceCard
 						className='col-span-12 md:col-span-8'
-						title='Event 2'
+						title={event2!.title}
 						image='https://img.freepik.com/premium-photo/realistic-artwork-professionals-discussing-project-meeting-room-generative-ai_922357-8148.jpg?w=1456'
 						cardCls='bg-gradient-to-br from-amber-400 to-orange-400'
 					/>
@@ -39,14 +42,14 @@ const Events = () => {
 				<div className='grid grid-cols-12 gap-4'>
 					<BounceCard
 						className='col-span-12 md:col-span-8'
-						title='Event 3'
-						image='https://img.freepik.com/premium-photo/unveiling-modern-business-tapestry_397134-4071.jpg?w=1460'
+						title={event3!.title}
+						image={event3!.image}
 						cardCls='bg-gradient-to-br from-green-400 to-emerald-400'
 					/>
 					<BounceCard
 						className='col-span-12 md:col-span-4'
-						title='Event 4'
-						image='https://img.freepik.com/free-photo/young-adults-brainstorming-ideas-office-desk-generated-by-ai_188544-37446.jpg'
+						title={event4!.title}
+						image={event4!.image}
 						cardCls='bg-gradient-to-br from-pink-400 to-red-400'
 					/>
 				</div>
