@@ -17,6 +17,8 @@ import {
 	MentalHealth,
 	IPLAuction,
 	SpaceXRoundtable,
+	Ignite,
+	Illuminate,
 } from '~/assets/events';
 
 export const eventsData: EventType[] = [
@@ -51,13 +53,13 @@ export const Initiatives: InitiativeType[] = [
 		date: 'January 28, 2023',
 		description:
 			'Annual event organised by E-Cell NIT Agartala exclusively for the 1st year students. Participants were divided in teams and given a problem statement after workshops on Entrepreneurship & Business models. They had 24 hours to brainstorm the potential solution & present before the jury.',
-		image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		image: Illuminate.src,
 	},
 	{
 		title: `IGNITE`,
 		date: '22nd-26th January 2023',
 		description: `A three day event where participants were graced with the opportunity to partake in enlightening speaker sessions featuring eminent figures from the entrepreneurial realm.The case solving event which themed as 'Local before global' cultivated the problem solving mindset among the attendances`,
-		image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		image: Ignite.src,
 	},
 	{
 		title: 'Carpe diem',

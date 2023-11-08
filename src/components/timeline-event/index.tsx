@@ -33,7 +33,7 @@ const TimelineEvent = ({ date, title, description, image }: Props) => {
 			<img
 				src={image}
 				alt='abc'
-				className='max-h-84 w-full max-w-sm rounded-2xl object-cover sm:max-h-96 sm:max-w-md md:max-w-lg lg:hidden lg:max-w-xl'
+				className='max-h-96 w-full max-w-sm rounded-2xl object-cover sm:max-h-96 sm:max-w-md md:max-w-lg lg:hidden lg:max-w-xl'
 			/>
 
 			<div className='min-w-fit max-w-md text-slate-700'>
