@@ -117,8 +117,10 @@ const ContactForm = () => {
 					</Form.Item>
 				</div>
 			</div>
-			<div className='mx-auto my-4'>
-				<Button type='submit'>Send</Button>
+			<div className='full mx-auto my-4 -translate-x-6'>
+				<Button type='submit' className='!mx-6'>
+					Send
+				</Button>
 			</div>
 		</Form>
 	);

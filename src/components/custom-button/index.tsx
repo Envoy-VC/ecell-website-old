@@ -1,12 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, onClick, className, ...props }: ButtonProps) => {
 	return (
 		<motion.button
-			className='button-gradient group relative w-fit overflow-hidden'
+			className={clsx(
+				'button-gradient group relative w-full max-w-[180px] overflow-hidden',
+				className
+			)}
 			whileTap={{ scale: 1 }}
 			whileHover={{ scale: 1.05 }}
 			onClick={onClick}
