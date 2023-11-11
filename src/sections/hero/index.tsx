@@ -103,7 +103,7 @@ export default function MultiLayerParallax() {
 			<Image
 				src={BackgroundImage.src}
 				alt='Background Illustration Illustration'
-				className='absolute bottom-0 z-0 min-w-[1024px] translate-y-[40%] object-cover sm:min-w-[1280px] sm:translate-y-[55%] lg:min-w-[1300px] xl:min-w-[1536px]'
+				className='absolute bottom-0 z-0 min-w-[1024px] translate-y-[50%] object-cover sm:min-w-[1280px] sm:translate-y-[55%] lg:min-w-[1300px] xl:min-w-[1536px]'
 				width={1280}
 				height={1280}
 				priority={true}
