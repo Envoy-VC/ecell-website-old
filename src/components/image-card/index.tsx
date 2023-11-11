@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Image, ImageProps } from 'antd';
+import Image from 'next/image';
+import type { ImageProps } from 'next/image';
 
 const ImageCard = ({ ...props }: ImageProps) => {
 	const x = useMotionValue(0);
@@ -56,9 +57,14 @@ const ImageCard = ({ ...props }: ImageProps) => {
 					transform: 'translateZ(75px)',
 					transformStyle: 'preserve-3d',
 				}}
-				className='absolute inset-3 grid h-fit place-content-center rounded-xl shadow-lg'
+				className='absolute inset-3 rounded-xl shadow-lg'
 			>
-				<Image preview={false} {...props} />
+				<Image
+					height={400}
+					width={400}
+					className='h-full w-full rounded-xl object-cover'
+					{...props}
+				/>
 			</div>
 		</motion.div>
 	);

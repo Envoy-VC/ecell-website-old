@@ -40,7 +40,6 @@ const Initiative = () => {
 										key={index}
 										src={initiative.image}
 										alt='abc'
-										className='h-full max-h-96 max-w-sm rounded-2xl object-cover sm:max-h-96 sm:max-w-md md:max-w-lg lg:max-w-md xl:max-h-[20rem]'
 									/>
 								);
 						})}
@@ -78,7 +77,6 @@ const Initiative = () => {
 										key={index}
 										src={initiative.image}
 										alt='abc'
-										className='max-h-96 w-full max-w-md rounded-2xl object-cover sm:max-h-96 sm:max-w-md md:max-w-lg lg:max-w-md xl:max-h-[24rem]'
 									/>
 								);
 							} else

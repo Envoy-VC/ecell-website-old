@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageCard from '../image-card';
 import { motion, useScroll, useTransform, cubicBezier } from 'framer-motion';
 
 interface Props {
