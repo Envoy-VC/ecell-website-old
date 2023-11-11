@@ -19,7 +19,7 @@ const TimelineEvent = ({ date, title, description, image }: Props) => {
 	const opacity = useTransform(
 		eventScrollProgress,
 		[0, 0.5, 1],
-		[0.2, 1, 0.5],
+		[0.1, 1, 0.5],
 		{
 			ease: cubicBezier(0.8, 0, 0.2, 1),
 		}

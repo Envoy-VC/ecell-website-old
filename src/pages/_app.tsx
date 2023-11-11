@@ -15,7 +15,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
 			</GlobalCanvas>
 			<SmoothScrollbar disablePointerOnScroll={false}>
 				{(bind) => (
-					<div {...bind} className='h-screen'>
+					<div {...bind} className='h-screen select-none'>
 						<Component {...pageProps} />
 					</div>
 				)}

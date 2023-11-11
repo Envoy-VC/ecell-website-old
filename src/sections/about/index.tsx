@@ -14,8 +14,8 @@ const About = () => {
 			className='flex min-h-screen w-full flex-col justify-between'
 			id='about'
 		>
-			<div className='mx-auto flex w-full max-w-screen-2xl flex-col justify-center px-8 py-24'>
-				<div className='mb-24 flex sm:justify-center'>
+			<div className='mx-auto flex w-full max-w-screen-2xl flex-col justify-center px-8 py-24 gap-8 sm:gap-24'>
+				<div className='flex sm:justify-center'>
 					<SectionHeading title='About Us' />
 				</div>
 

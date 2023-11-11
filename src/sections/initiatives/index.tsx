@@ -13,7 +13,7 @@ const Initiative = () => {
 		target: targeRef,
 		offset: ['start end', 'end start'],
 	});
-	const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+	const scale = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
 	return (
 		<section
@@ -51,10 +51,11 @@ const Initiative = () => {
 					</div>
 					<div className='flex flex-row'>
 						<motion.div
-							className='z-[2] h-full w-[6px] origin-top bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 text-transparent sm:w-[10px]'
+							className='z-[2] h-full w-[6px] origin-top overflow-y-hidden bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 text-transparent sm:w-[10px]'
 							style={{ scaleY: scale }}
 							ref={targeRef}
 						/>
+
 						<div className='relative h-full w-[6px] origin-top -translate-x-[6px] border-[1px] bg-gray-300 text-transparent sm:w-[10px] sm:-translate-x-[10px]' />
 						<div className='relative z-[2] flex h-full -translate-x-[20px] flex-col justify-around sm:-translate-x-[31px]'>
 							{Array(5)
