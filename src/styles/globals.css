@@ -9,11 +9,6 @@
 	src: url('../../public/fonts/Adieu-Regular.otf');
 }
 
-@font-face {
-	font-family: 'Magiona-Display-Ouline-Italic';
-	src: url('../../public/fonts/Magiona-Display-Ouline-Italic.ttf');
-}
-
 .wrapper {
 }
 

@@ -7,7 +7,6 @@ export default {
 			fontFamily: {
 				adieuRegular: ['Adieu-Regular', 'sans-serif'],
 				raleway: ['Raleway', 'sans-serif'],
-				magionaOutline: ['Magiona-Display-Ouline-Italic', 'sans-serif'],
 			},
 			animation: {
 				text: 'text 10s ease infinite',

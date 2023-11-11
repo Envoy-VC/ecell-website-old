@@ -1,3 +1,4 @@
+import SEO from './seo';
 import Navbar from './navbar';
 import FloatingMenu from './menu';
 import SectionHeading from './section-heading';
@@ -11,6 +12,7 @@ import SocialLinks from './social-links';
 import EmailTemplate from './email-template';
 
 export {
+	SEO,
 	Navbar,
 	FloatingMenu,
 	SectionHeading,

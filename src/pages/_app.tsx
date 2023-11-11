@@ -4,10 +4,12 @@ import Script from 'next/script';
 
 import '@14islands/r3f-scroll-rig/css';
 import '~/styles/globals.css';
+import { SEO } from '~/components';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
 	return (
 		<>
+			<SEO />
 			<GlobalCanvas style={{ zIndex: -1 }}>
 				<ambientLight />
 			</GlobalCanvas>

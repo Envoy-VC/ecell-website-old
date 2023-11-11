@@ -66,7 +66,7 @@ export default function MultiLayerParallax() {
 							}}
 							onInit={(typewriter) => {
 								typewriter
-									.typeString('RESIST THE OBVIOUS. ')
+									.typeString('RESIST THE OBVIOUS')
 									.pauseFor(5000)
 									.start();
 							}}
