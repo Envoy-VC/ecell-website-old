@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 	port: 465,
 	secure: true,
 	auth: {
-		user: 'envoy1084@gmail.com',
+		user: 'nitaecell@gmail.com',
 		pass: env.NEXT_PUBLIC_PASSWORD,
 	},
 });
@@ -25,7 +25,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 		case 'POST': {
 			const options = {
 				from: body.email!,
-				to: 'envoy1084@gmail.com',
+				to: 'nitaecell@gmail.com',
 				subject: 'Contact',
 				html: body.html,
 			};
