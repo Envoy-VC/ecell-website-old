@@ -82,3 +82,13 @@ body::-webkit-scrollbar-thumb {
 .segmentCardShadow {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.scrollbar::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
