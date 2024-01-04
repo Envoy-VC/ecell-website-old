@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Details = () => {
 	return (
-		<section className='max-sm:bg-fit w-full bg-[url("https://free4kwallpapers.com/uploads/originals/2021/03/01/saturn-planet-illustration-wallpaper.jpg")] bg-auto px-10 pb-16 pt-5 leading-8 max-sm:px-5 max-sm:py-5'>
+		<section className='w-full bg-[url("https://free4kwallpapers.com/uploads/originals/2021/03/01/saturn-planet-illustration-wallpaper.jpg")] bg-auto px-10 pb-16 pt-5 leading-8 max-sm:bg-contain max-sm:px-5 max-sm:py-5'>
 			<nav className='flex w-full items-center justify-between '>
 				<Image
 					src={elogo}
@@ -248,7 +248,7 @@ const Details = () => {
 								standards.
 							</li>
 						</ul>
-					</p>{' '}
+					</p>
 					<span className='text-4xl font-bold text-white max-sm:text-xl'>
 						Disadvantages of ERP:
 					</span>
@@ -363,7 +363,7 @@ const Details = () => {
 						<ul className='list-disc text-white'>
 							<li>
 								What are the benefits that they see from using
-								it?{' '}
+								it?
 							</li>
 							<li>
 								With the ERP software they currently use, what
@@ -382,7 +382,7 @@ const Details = () => {
 								they use their current ERP?
 							</li>
 							<li>
-								Any rivals for them in the ERP software market?{' '}
+								Any rivals for them in the ERP software market?
 							</li>
 							<li>
 								Are they happy with the ERP they are now using?
@@ -399,7 +399,7 @@ const Details = () => {
 								Engage all stakeholders like owners, managers
 								and employees and also with all kinds of
 								businesses to capture diverse perspectives and
-								needs.{' '}
+								needs.
 							</li>
 							<li>Develop structured Questionnaires</li>
 							<li>Ensure a broad outreach.</li>

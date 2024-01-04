@@ -6,7 +6,7 @@ import Image from 'next/image';
 const handleSubmit = () => {};
 const Registration = () => {
 	return (
-		<section className='max-sm:bg-fit w-full bg-[url("https://free4kwallpapers.com/uploads/originals/2021/03/01/saturn-planet-illustration-wallpaper.jpg")] bg-cover p-10 max-sm:px-3 max-sm:py-5'>
+		<section className='w-full bg-[url("https://free4kwallpapers.com/uploads/originals/2021/03/01/saturn-planet-illustration-wallpaper.jpg")] bg-cover p-10 max-sm:px-3 max-sm:py-5'>
 			<div>
 				<Image
 					src={elogo}
